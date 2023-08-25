@@ -1,0 +1,184 @@
+@use 'variables';
+
+body {
+    background-image: linear-gradient(to right, variables.$bleu-pale 50%, variables.$creme 50%);
+    background-size: 120px 100%;
+  }
+
+h1{
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 75px;
+    margin: 30px auto;
+    color: variables.$gris;
+    text-shadow:2px 3px variables.$creme, 5px 6px variables.$rouge;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 300px 200px;
+    column-gap: 16px;
+
+    .score-panel{
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$gris;
+        color: variables.$creme;
+        border-radius: 20px;
+        width: 200px;
+        height: fit-content;
+
+        h2{
+            font-family: 'Amaranth', sans-serif;
+            margin: 20px auto 5px auto;
+        }
+
+        p{
+            font-family: 'Amaranth', sans-serif;
+            font-size: 48px;
+            margin: 5px auto 20px auto;
+        }
+        
+    }
+
+    .score-player{
+        grid-column: 2 / 4;
+    }
+
+    .score-ordi{
+        grid-column: 10 / 12;
+        justify-self: end;
+    }
+
+    [class^="wrap-attack"]{
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 300px;
+    }
+
+    .wrap-attack-player{
+        grid-column: 3 / 7;
+    }
+
+    .wrap-attack-ordi{
+        grid-column: 7 / 11;
+    }
+
+
+    .wrap-buttons{
+        grid-row: 3 / 4;
+        grid-column: 4 / 10;
+        align-content: center;
+    }
+}
+
+.player-weapon, .computer-weapon{
+    display: none;
+}
+
+
+.wrap-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+
+    .container-button{
+        width: 200px;
+        height: 200px;
+        margin: 0 30px;
+    
+        button{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: variables.$rouge;
+            border: 6px variables.$creme solid;
+            border-radius: 100px;
+            box-shadow: 6px 6px variables.$noirish;
+            width: 195px; 
+            height: 195px;
+            
+         
+            img{
+             max-height: 100px;
+            }
+         
+            &:hover{
+             width: 193px;
+             height: 193px;
+             box-shadow: 3px 3px variables.$noirish;
+             transition-duration: 0.1s;
+
+             img{
+                max-height: 98px;
+             }
+            }
+
+            &:active{
+                background-color: variables.$rouge-fonce;
+                width: 190px;
+                height: 190px;
+                box-shadow: 1px 1px variables.$noirish;
+                transition-duration: 0.1s;
+
+                img{
+                    max-height: 90px;
+                }
+
+            }
+         }
+    
+    }
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.5s;
+
+    &_content {
+        background-color: variables.$noirish;
+        margin: 15% auto;
+        padding: 20px 70px;
+        border: 6px solid variables.$creme;
+        border-radius: 20px;
+        width: fit-content;
+
+        &_result{
+            font-family: 'Amaranth', sans-serif;
+            font-size: 48px;
+            color: variables.$creme;
+            text-align: center;
+        }
+
+        &_winner{
+            font-family: 'Fascinate Inline', cursive;
+            font-size: 75px;
+            color: variables.$creme;
+            text-align: center;
+        }
+    }
+
+  }
+  
+ 
+
+
+

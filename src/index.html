@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/styles.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Fascinate+Inline&display=swap" rel="stylesheet">
+    <title>Roche Papier Ciseaux</title>
+</head>
+<body>
+    <header>
+        <h1>roche papier ciseaux</h1>
+    </header>
+    <main>
+        <div class="score-panel score-player">
+            <h2>Votre score</h2>
+            <p>0</p>
+        </div>
+        <div class="score-panel score-ordi">
+            <h2>Ordinateur</h2>
+            <p>0</p>
+        </div>
+        <div class="wrap-attack-player">
+            <img src="./img/roche.png" alt="poing" class="hand">
+            <img src="./img/roche.png" alt="roche" class="player-weapon">
+            <img src="./img/papier.png" alt="papier" class="player-weapon">
+            <img src="./img/ciseaux.png" alt="ciseaux" class="player-weapon">
+        </div>
+        <div class="wrap-attack-ordi">
+            <img src="./img/roche-reversed.png" alt="poing" class="hand">
+            <img src="./img/roche-reversed.png" alt="roche" class="computer-weapon">
+            <img src="./img/papier-reversed.png" alt="papier" class="computer-weapon">
+            <img src="./img/ciseaux-reversed.png" alt="ciseaux" class="computer-weapon">
+        </div>
+        <div class="wrap-buttons">
+            <div class="container-button">
+                <button class="btn-attack" aria-label="Roche"><img aria-hidden="true" src="./img/roche.png" alt="Choisir roche"></button>
+            </div>
+            <div class="container-button">
+                <button class="btn-attack" aria-label="Papier"><img aria-hidden="true" src="./img/papier.png" alt="Choisir papier"></button>
+            </div>
+            <div class="container-button">
+                <button class="btn-attack" aria-label="Ciseaux"><img aria-label="true" src="./img/ciseaux.png" alt="Choisir ciseaux"></button>
+            </div>
+            
+            
+            
+        </div>
+        <div class="modal">
+            <div class="modal_content">
+                <p class="modal_content_result">le papier enveloppe la roche</p>
+                <p class="modal_content_winner">Vous avez gagné!</p>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <script type="module" src="./main.js"></script>
+    
+</body>
+</html>
